@@ -28,8 +28,8 @@ do
 		send)	
 			while [ "$(wc -l otd.txt)" != "0" ]
 			do
-				read -rp "Please enter your emmail within "": " MAIL
-				echo "Subject: Your download links comin n HOT!!"
+				read -rp "Please enter your email within "": " MAIL
+				echo "Subject: Your download links comin n HOT!!" >> otd.txt
 				msmtp "$MAIL" < otd.txt
 			done;;
 		exit)
